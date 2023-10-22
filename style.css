@@ -184,6 +184,9 @@ p.error{
         width: 80%;
         margin: auto;
     }
+    header{
+        margin-top: 6rem;
+    }
     .secondsec{
         width: 100%;
         height: 100%;
@@ -196,6 +199,9 @@ p.error{
         display: grid;
         grid-template-columns: 30% 30% 30%;
         gap: 1rem;
+    }
+    .two-div h2{
+        font-size: 30px;
     }
 }
 
