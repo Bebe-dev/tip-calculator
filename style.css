@@ -1,0 +1,207 @@
+:root{
+    --strong-cyan: hsl(172, 67%, 45%);
+    --dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan:  hsl(185, 41%, 84%);
+    --lighter-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --other-cyan: hsl(183, 86%, 22%);
+    --bright-cyan: hsl(172, 63%, 72%);
+    --red: hsl(0, 86%, 56%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 24px; 
+}
+body{
+    background-color: var(--light-grayish-cyan);
+}
+  
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+main{
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 1.5rem 0.5rem 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.firstsec{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 0.5rem;
+    width: 100%;
+}
+.dark{
+    color: var(--dark-grayish-cyan);
+    font-size: 18px;
+}
+.firstsec .one div, .firstsec .three div{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.firstsec .one div img, .firstsec .three div img{
+    position: absolute;
+    left: 1rem;
+}
+.two p{
+    font-size: 16px;
+    padding: 0.5rem 0;
+}
+input{
+    color: var(--dark-cyan);
+    background-color: var(--lighter-grayish-cyan);
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 0.3rem ;
+    width: 100%;
+    text-align: end;
+    
+}
+input.error{
+    border: 2px solid var(--red);
+}
+input:hover{
+    border: 2px solid var(--strong-cyan);
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+input::placeholder{
+    text-align: right;
+}
+.firstsec .one div.text, .firstsec .three div.text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.2rem;
+}
+.text p{
+    font-size: 16px;
+} 
+p.errorMessage1,.errorMessage2{
+    display: none;
+}
+p.error{
+    color: var(--red);  
+    display: inline-block;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 0.5rem;
+}
+.grid button{
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 0.25rem;
+}
+.grid button.number:active{
+    background-color: var(--strong-cyan);
+}
+.grid button:hover{
+    background-color: var(--bright-cyan);
+    color: var(--dark-cyan);
+    cursor: pointer;
+}
+.grid button:last-child{
+    background-color: var(--lighter-grayish-cyan);
+    color: var(--dark-grayish-cyan);
+}
+.grid button:last-child:hover{
+    background-color: var(--strong-cyan);
+    color: var(--dark-cyan);
+}
+
+.secondsec{
+    background-color: var(--dark-cyan);
+    border-radius: 0.5rem;
+    padding: 1.5rem 0.75rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+.secondsec h3{
+    color: var(--white);
+    font-size: 14px;
+}
+.secondsec p{
+    color: var(--grayish-cyan);
+    font-size: 12px;
+}
+.secondsec h2{
+    color: var(--strong-cyan);
+}
+.secondsec button{
+    width: 100%;
+    background-color: var(--other-cyan);
+    color: var(--dark-cyan);
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 0.25rem;
+}
+.secondsec button.reset:hover{
+    cursor: pointer;
+    background-color: var(--bright-cyan);
+    color: var(--dark-cyan);
+}
+.secondsec button.completed{
+    background-color: var(--strong-cyan)
+}
+.two-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+@media screen and (min-width: 650px) {
+    main{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+    }
+    .secondsec{
+        width: 100%;
+        height: 100%;
+        gap: 2.5rem;
+    }
+    .secondsec button{
+        margin-top: 4rem;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        gap: 1rem;
+    }
+}
+
+
+@media screen and (min-width: 1000px){
+    main{
+        width: 60%;
+    }
+}
